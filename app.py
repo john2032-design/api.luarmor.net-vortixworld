@@ -17,7 +17,9 @@ def redirect_page():
     </head>
     <body>
       <script>
-        location.replace("{target}");
+        setTimeout(() => {{
+          location.replace("{target}");
+        }}, 3000);
       </script>
     </body>
     </html>
