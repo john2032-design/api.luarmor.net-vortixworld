@@ -70,7 +70,7 @@ def generate_html(target: str, nonce: str) -> str:
     """
     return render_template_string(template, target=target, nonce=nonce, escaped_target=escaped_target)
 
-@app.route("/redirect")
+@app.route("/luarmor")
 @limiter.limit("10 per minute")
 def redirect_page() -> Union[Tuple[make_response, int], make_response]:
     target = request.args.get("to")
